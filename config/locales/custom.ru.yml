@@ -1,0 +1,20 @@
+ru:
+  "yes": 'Да'
+  "no": 'Нет'
+  edit: 'Редактировать'
+  delete: 'Удалить'
+  publish: 'Опубликовать'
+  unpublish: 'Снять с публикации'
+  activate: 'Активировать'
+  sure: 'Вы уверены?'
+  cancel: 'Отмена'
+  control: 'Управление'
+  confirm: 'Подтвердить'
+
+  layouts:
+    web:
+      admin:
+        global:
+          navbar:
+            exit: Выход
+            home: Домашняя страница

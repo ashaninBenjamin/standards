@@ -1,4 +1,4 @@
-class Web::Admin::SessionsController < ApplicationController
+class Web::Admin::SessionsController < Web::Admin::ApplicationController
   def new
     @session = AdminSignInType.new
   end

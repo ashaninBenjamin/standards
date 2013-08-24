@@ -9,8 +9,8 @@
           %li
             %a{href: '#'}
 
-        / .navbar-text.pull-right
-        /   - if admin_signed_in?
-        /     = link_to t('.exit'), admin_session_path, method: :delete
-        /     |
-        /   = link_to t('.home'), root_path
+        .navbar-text.pull-right
+          - if admin_signed_in?
+            = link_to t('.exit'), admin_session_path, method: :delete
+            |
+          = link_to t('.home'), root_path

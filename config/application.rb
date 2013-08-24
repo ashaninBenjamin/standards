@@ -22,6 +22,10 @@ module Standards
     config.autoload_paths += %W(#{config.root}/lib)
     config.i18n.default_locale = :ru
 
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    # config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+
     config.generators do |g|
       g.template_engine :haml
       g.stylesheets false
