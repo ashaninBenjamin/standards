@@ -4,14 +4,14 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true, presence: true, email: true
 
   state_machine :state, initial: :active do
-    state :inactive
+    state :deleted
     state :active
 
     event :activate do
-      transition from: :inactive, to: :active, if: :persisted?
+      transition from: :deleted, to: :active, if: :persisted?
     end
 
-    event :inacticate do
+    event :del do
       transition from: :active, to: :deleted, if: :persisted?
     end
   end
