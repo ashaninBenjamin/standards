@@ -18,3 +18,13 @@ ru:
           navbar:
             exit: Выход
             home: Домашняя страница
+  web:
+    shared:
+      action_toolbar:
+        page: Страница
+    admin:
+      clients:
+        index:
+          header: Клиенты
+          no_clients: Нет клиентов
+          add_client: Добавить клиента

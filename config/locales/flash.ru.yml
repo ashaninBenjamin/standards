@@ -1,0 +1,7 @@
+ru:
+  flash:
+    web:
+      admin:
+        sessions:
+          create:
+            success: Авторизация прошла успешно.

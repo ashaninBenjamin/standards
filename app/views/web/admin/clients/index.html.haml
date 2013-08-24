@@ -1,2 +1,27 @@
-%h1 Web::Admin::Clients#index
-%p Find me in app/views/web/admin/clients/index.html.haml
+%legend= t('.header')
+- if @clients.any?
+  %table.table.table-stripped
+    %thead
+      %tr
+        - with_options per_page: params[:per_page] do |c|
+          %th= c.sort_link @q, :id
+          %th= c.sort_link @q, :email
+          %th= c.sort_link @q, :first_name
+          %th= c.sort_link @q, :last_name
+          %th= c.sort_link @q, :state
+          %th= c.sort_link @q, :created_at
+        %th= t(:control)
+    %tbody
+      - @clients.each do |client|
+        %tr
+          %td= client.id
+          %td= client.email
+          %td= client.first_name
+          %td= client.last_name
+          %td= object_state_label client
+          %td= l client.created_at
+          %td= render 'control_panel', client: client
+- else
+  %i= t('.no_clients')
+.form-actions
+  = render 'web/admin/shared/action_toolbar', {collection: @clients, link_title: nil, link_path: nil}
