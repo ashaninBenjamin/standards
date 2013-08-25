@@ -1,0 +1,22 @@
+ru:
+  attributes:
+    id: id
+    email: Почта
+    first_name: 'Имя'
+    last_name: 'Фамилия'
+    password: 'Пароль'
+    password_confirmation: 'Подтверждение пароля'
+    state: 'Состояние записи'
+    created_at: 'Дата создания'
+    updated_at: 'Дата обновления'
+
+  activerecord:
+    state_machines:
+      user:
+        state:
+          states:
+            active: Активна
+            deleted: &deleted Удалена
+          events:
+            activate: Активировать
+            del: &del Удалить

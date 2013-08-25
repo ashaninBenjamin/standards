@@ -1,0 +1,11 @@
+ru:
+  simple_form:
+    error_notification:
+      default_message: 'Пожалуйста, заполните выделенные поля:'
+    placeholders:
+      client:
+        email: Почтовый адрес
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        first_name: Имя
+        last_name: Фамилия

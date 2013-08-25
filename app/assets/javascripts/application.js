@@ -16,12 +16,6 @@
 //= require ckeditor/ckeditor
 //= require ckeditor/config
 
-$(document).ready(function () {
-    $("div.error, div.alert, div.notice, div.success, div.info").delay(1500).animate({
-        opacity: 0.15
-    }, 1200).slideToggle();
-});
-
 $(document).on("change", "#standard_parent_id", function () {
     var select = $("#standard_number"),
         i,

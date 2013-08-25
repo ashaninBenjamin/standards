@@ -7,3 +7,6 @@ ru:
         create: Войти
       client_sign_in_type:
         create: Войти
+      client:
+        create: Зарегистировать
+        update: Обновить

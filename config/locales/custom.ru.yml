@@ -28,3 +28,11 @@ ru:
           header: Клиенты
           no_clients: Нет клиентов
           add_client: Добавить клиента
+    sessions:
+      new:
+        header: Авторизация
+        new_user: Зарегистироваться?
+    clients:
+      new:
+        header: Регистрация
+        sign_in: Войти
