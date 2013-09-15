@@ -1,0 +1,38 @@
+ru:
+  "yes": 'Да'
+  "no": 'Нет'
+  edit: 'Редактировать'
+  delete: 'Удалить'
+  publish: 'Опубликовать'
+  unpublish: 'Снять с публикации'
+  activate: 'Активировать'
+  sure: 'Вы уверены?'
+  cancel: 'Отмена'
+  control: 'Управление'
+  confirm: 'Подтвердить'
+
+  layouts:
+    web:
+      admin:
+        global:
+          navbar:
+            exit: Выход
+            home: Домашняя страница
+  web:
+    shared:
+      action_toolbar:
+        page: Страница
+    admin:
+      clients:
+        index:
+          header: Клиенты
+          no_clients: Нет клиентов
+          add_client: Добавить клиента
+    sessions:
+      new:
+        header: Авторизация
+        new_user: Зарегистироваться?
+    clients:
+      new:
+        header: Регистрация
+        sign_in: Зарегистированы?

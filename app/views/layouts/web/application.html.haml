@@ -1,0 +1,8 @@
+!!!
+%html
+  %head
+    = render 'layouts/web/global/head'
+  - if client_signed_in?
+    = render 'layouts/web/global/signed_in'
+  - else
+    = render 'layouts/web/global/not_signed'

@@ -1,0 +1,7 @@
+%h1 Редактирование пользователя
+.squiggly-border
+= simple_form_for @client, action: :update, html: {class: 'form-horizontal'} do |f|
+  = f.input :email
+  = f.input :first_name
+  = f.input :last_name
+  = f.submit class: 'btn btn-success'

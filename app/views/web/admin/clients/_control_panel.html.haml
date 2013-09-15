@@ -1,0 +1,6 @@
+- if client.can_activate?
+  = link_to trigger_state_event_admin_client_path(client, {event: :activate}), data: {method: :put, confirm: t(:sure)}, title: t(:activate) do
+    %i.icon-share-alt
+- if client.can_del?
+  = link_to trigger_state_event_admin_client_path(client, {event: :del}), data: {method: :put, confirm: t(:sure)}, title: t(:delete) do
+    %i.icon-remove
