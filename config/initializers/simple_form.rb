@@ -45,6 +45,34 @@ SimpleForm.setup do |config|
     b.use :error, wrap_with: { tag: :span, class: :error }
   end
 
+  config.wrappers :ico_radmin_locked, tag: 'div', class: 'input-append', error_class: 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.wrapper tag: 'div' do |input|
+      input.wrapper tag: 'span', class: 'add-on' do |span|
+        span.wrapper tag: 'i', class: 'radmin-icon radmin-locked' do |i|
+        end
+      end
+      input.use :input
+      input.use :hint, wrap_with: { tag: 'span', class: 'help-block' }
+      input.use :error, wrap_with: { tag: :span, class: 'help-inline' }
+    end
+  end
+
+  config.wrappers :ico_radmin_user, tag: 'div', class: 'input-append', error_class: 'error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.wrapper tag: 'div' do |input|
+      input.wrapper tag: 'span', class: 'add-on' do |span|
+        span.wrapper tag: 'i', class: 'radmin-icon radmin-user' do |i|
+        end
+      end
+      input.use :input
+      input.use :hint, wrap_with: { tag: 'span', class: 'help-block' }
+      input.use :error, wrap_with: { tag: 'span', class: 'help-inline' }
+    end
+  end
+
   # The default wrapper to be used by the FormBuilder.
   config.default_wrapper = :default
 

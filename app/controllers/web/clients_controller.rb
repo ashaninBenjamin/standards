@@ -11,7 +11,6 @@ class Web::ClientsController < Web::ApplicationController
       sign_in @client
       redirect_to root_path
     else
-      p @client.errors.messages
       render action: :new
     end
   end

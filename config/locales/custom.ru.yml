@@ -35,4 +35,4 @@ ru:
     clients:
       new:
         header: Регистрация
-        sign_in: Войти
+        sign_in: Зарегистированы?
