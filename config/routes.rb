@@ -17,5 +17,6 @@ Standards::Application.routes.draw do
     resources :standards, only: [:index, :show, :new, :create, :edit, :update] do
       put :trigger_state_event, on: :member
     end
+    resources :feeds, only: [:index, :show]
   end
 end
