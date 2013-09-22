@@ -1,12 +1,13 @@
 class Standard < ActiveRecord::Base
   include StandardRepository
+  before_save :set_root
 
   has_ancestry
-  belongs_to :user
+  belongs_to :client, foreign_key: 'user_id'
 
   validates :name, presence: true
   validates :number, presence: true, unique_number: true
-  validates :user, presence: true
+  validates :client, presence: true
 
   state_machine :state, initial: :refrained do
     state :published
@@ -87,6 +88,6 @@ class Standard < ActiveRecord::Base
 
   def set_root
     return if number.zero?
-    self.parent = user.standards.roots.first unless parent_id
+    self.parent = client.standards.roots.first unless parent_id
   end
 end
