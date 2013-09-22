@@ -36,3 +36,6 @@ ru:
       new:
         header: Регистрация
         sign_in: Зарегистированы?
+    standards:
+      header: Стандарты
+      no_one_standard: Стандартов ещё нет.

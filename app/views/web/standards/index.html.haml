@@ -1,0 +1,9 @@
+%h1= t(".header")
+.squiggly-border
+
+.items
+  - if @standards.any?
+    - @standards.each do |one|
+      .item= link_to one.code_with_name, standard_path(one.link), style: "margin-left:#{(one.depth - 1) * 20}px;"
+  - else
+    = t(".no_one_standard")

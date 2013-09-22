@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_filter :set_locale
 
-  protect_from_forgery with: :exception
+  protect_from_forgery
 
   include Concerns::FlashHelper
   include Concerns::AuthManagment

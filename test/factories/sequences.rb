@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  sequence :string, aliases: [:first_name, :last_name] do |n|
+  sequence :string, aliases: [:first_name, :last_name, :name, :content] do |n|
     "string-#{n}"
   end
 
