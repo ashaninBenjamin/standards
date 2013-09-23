@@ -58,6 +58,8 @@ ru:
         header: Редактировать стандарт
       show:
         edit_standard: Редактировать стандарт
+      form:
+        select_include_blank: Не принадлежит
     feeds:
       index:
         header: Новости
