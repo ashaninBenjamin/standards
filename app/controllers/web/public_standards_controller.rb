@@ -4,7 +4,7 @@ class Web::PublicStandardsController < Web::ProtectedApplicationController
   end
 
   def show
-    @public_standards = Standard.public(current_client).find(params[:id])
+    @public_standard = Standard.public(current_client).find(params[:id])
   end
 
   def copy
