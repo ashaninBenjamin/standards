@@ -1,2 +1,5 @@
-%h1 Web::Feeds#show
-%p Find me in app/views/web/feeds/show.html.haml
+%h1= t('.header')
+.squiggly-border
+%h3= @feed.title
+%em= l @feed.updated_at
+%p.lead= raw @feed.content

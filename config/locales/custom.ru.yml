@@ -48,5 +48,10 @@ ru:
         header: Регистрация
         sign_in: Зарегистированы?
     standards:
-      header: Стандарты
-      no_one_standard: Стандартов ещё нет.
+      index:
+        header: Стандарты
+        no_one_standard: Стандартов ещё нет.
+    feeds:
+      index:
+        header: Новости
+        no_feeds: Новостей ещё не добавлено :(

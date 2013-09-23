@@ -4,7 +4,7 @@ class ClientSignInType
   attribute :email, String
   attribute :password, String
 
-  validates :email, presence: true, email: true
+  validates :email, presence: true
   validates :password, presence: true
 
   validate :check_authenticate
