@@ -23,4 +23,10 @@ Standards::Application.routes.draw do
     end
     resources :feeds, only: [:index, :show]
   end
+
+  namespace :api do
+    resources :standards, only: [] do
+      get :numbers, on: :member
+    end
+  end
 end
