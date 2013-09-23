@@ -1,6 +1,8 @@
 %h1= t(".header")
 .squiggly-border
-
+= link_to t('.new_standard'), new_standard_path, class: 'btn btn-info'
+%br
+%br
 .items
   - if @standards.any?
     - @standards.each do |one|

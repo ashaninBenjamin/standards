@@ -51,6 +51,11 @@ ru:
       index:
         header: Стандарты
         no_one_standard: Стандартов ещё нет.
+        new_standard: Добавить стандарт
+      new:
+        header: Добавить новый стандарт
+      edit:
+        header: Редактировать стандарт
     feeds:
       index:
         header: Новости

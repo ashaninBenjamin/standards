@@ -13,3 +13,6 @@ ru:
       feed:
         create: &create Создать
         update: &update Обновить
+      standard:
+        create: *create
+        update: *update

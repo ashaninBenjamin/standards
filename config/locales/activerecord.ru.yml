@@ -29,8 +29,30 @@ ru:
         events:
           publish: &publish Опубликовать
           unpublish: &unpublish Снять публикацию
+      standard:
+        states:
+          refrained: В разработке
+          published: Готовый
+        events:
+          refrain: В разработку
+          publish: В готовые
+        access_state:
+          states:
+            private: Только мне
+            public: Всем
+          events:
+            show: Всем
+            hide: Только мне
+
 
     attributes:
       feed:
         title: Заголовок
         content: Содержание
+      standard:
+        name: Название
+        parent_id: Родительский
+        number: Номер
+        access_state_event: Доступ
+        state_event: Переместить
+
