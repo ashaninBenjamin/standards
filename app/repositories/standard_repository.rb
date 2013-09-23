@@ -18,7 +18,7 @@ module StandardRepository
       roots.first.descendants
     end
 
-    scope :public, -> { with(access_state: :public) }
+    scope :public, -> (user) { with(access_state: :public).exclude(user_id: user.id) }
   end
 
 end
