@@ -1,4 +1,4 @@
-class Web::Admin::ClientsController < Web::Admin::ApplicationController
+class Web::Admin::ClientsController < Web::Admin::ProtectedApplicationController
   def index
     @q = ::Client.ransack(params[:q])
     @clients = @q.result.page(params[:page]).per(params[:per_page])

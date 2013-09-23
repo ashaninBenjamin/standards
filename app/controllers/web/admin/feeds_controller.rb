@@ -1,4 +1,4 @@
-class Web::Admin::FeedsController < Web::Admin::ApplicationController
+class Web::Admin::FeedsController < Web::Admin::ProtectedApplicationController
   def index
     @q = Feed.ransack(params[:q])
     @feeds = @q.result.page(params[:page]).per(params[:per_page])
