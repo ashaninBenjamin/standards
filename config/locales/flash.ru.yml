@@ -13,3 +13,8 @@ ru:
           trigger_state_event:
             success: &trigger_success Состояние записи успешно обновлено.
             error: &trigger_error Произошли ошибки при обновлении состояния записи.
+        standards:
+          create:
+            sucess: Стандарт успешно добавлен.
+          udpate:
+            sucess: Стандарт успешно обновлён.

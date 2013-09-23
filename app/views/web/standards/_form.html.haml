@@ -4,7 +4,8 @@
   = f.input :parent_id, collection: @available_parents.collect {|p| [ p.for_select, p.id ] }, include_blank: false
   = f.input :number, collection: @available_numbers, include_blank: false
   = f.input :content, input_html: { class: 'ckeditor', ckeditor: {toolbar: 'My'} }
-  = f.input :access_state_event, collection: standard_access_states
-  = f.input :state_event, collection: standard_states
+  - if f.object.persisted?
+    = f.input :access_state_event, collection: f.object.access_state_transitions.map {|s| [s.human_event, s.event]}
+    = f.input :state_event, collection: f.object.state_transitions.map {|s| [s.human_event, s.event]}
   .form-actions
     = f.submit class: "btn btn-success"

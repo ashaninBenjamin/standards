@@ -19,11 +19,11 @@ class Standard < ActiveRecord::Base
     end
 
     event :refrain do
-      transition all => :refrained
+      transition from: :published, to: :refrained, if: :persisted?
     end
 
     event :publish do
-      transition all => :published
+      transition from: :refrained, to: :published, if: :persisted?
     end
   end
 
@@ -32,11 +32,11 @@ class Standard < ActiveRecord::Base
     state :public
 
     event :hide do
-      transition all => :private
+      transition from: :public, to: :private, if: :persisted?
     end
 
     event :show do
-      transition all => :public
+      transition from: :private, to: :public, if: :persisted?
     end
   end
 
