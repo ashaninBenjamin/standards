@@ -19,4 +19,12 @@ class Web::PublicStandardsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should post copy" do
+    post :copy, @params
+    assert_response :redirect
+
+    standard = Standard.last
+    assert { @public_standard.id != standard.id }
+  end
+
 end
