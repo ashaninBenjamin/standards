@@ -10,3 +10,6 @@ ru:
       client:
         create: Зарегистировать
         update: Обновить
+      feed:
+        create: &create Создать
+        update: &update Обновить

@@ -1,0 +1,11 @@
+= simple_form_for @feed, url: url, html:{class: "form-horizontal"} do |f|
+  = f.error_notification
+  %legend= legend
+  = f.input :title
+  = f.input :content
+  .form-actions
+    = f.submit class: 'btn btn-success'
+    - if @feed.can_publish?
+      = link_to t(:publish), trigger_state_event_admin_feed_path(@feed, {event: :publish}), data: {method: :put, confirm: t(:sure)}, class: 'btn btn-info'
+    - if @feed.can_unpublish?
+      = link_to t(:unpublish), trigger_state_event_admin_feed_path(@feed, {event: :unpublish}), data: {method: :put, confirm: t(:sure)}, class: 'btn btn-info'

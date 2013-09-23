@@ -28,6 +28,15 @@ ru:
           header: Клиенты
           no_clients: Нет клиентов
           add_client: Добавить клиента
+      feeds:
+        index:
+          header: Новости
+          no_feeds: Нет новостей
+          add_feed: Добавить новость
+        new:
+          new_feed: Добавление новости
+        edit:
+          edit_feed: Редактирование новости
     sessions:
       new:
         header: Авторизация

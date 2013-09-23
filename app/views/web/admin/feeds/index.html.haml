@@ -1,2 +1,25 @@
-%h1 Web::Admin::Feeds#index
-%p Find me in app/views/web/admin/feeds/index.html.haml
+%legend= t('.header')
+- if @feeds.any?
+  %table.table.table-stripped
+    %thead
+      %tr
+        - with_options per_page: params[:per_page] do |c|
+          %th= c.sort_link @q, :id
+          %th= c.sort_link @q, :title
+          %th= ham(:feed, :content)
+          %th= c.sort_link @q, :state
+          %th= c.sort_link @q, :created_at
+        %th= t(:control)
+    %tbody
+      - @feeds.each do |feed|
+        %tr
+          %td= feed.id
+          %td= feed.title
+          %td= feed.content
+          %td= object_state_label feed
+          %td= l feed.created_at
+          %td= render 'control_panel', feed: feed
+- else
+  %i= t('.no_feeds')
+.form-actions
+  = render 'web/admin/shared/action_toolbar', {collection: @feeds, link_title: t('.add_feed'), link_path: new_admin_feed_path }

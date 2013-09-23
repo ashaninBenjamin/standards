@@ -5,3 +5,11 @@ ru:
         sessions:
           create:
             success: Авторизация прошла успешно.
+        feeds:
+          create:
+            success: Новость успешно добавлена.
+          update:
+            success: Новость успешно обновлена.
+          trigger_state_event:
+            success: &trigger_success Состояние записи успешно обновлено.
+            error: &trigger_error Произошли ошибки при обновлении состояния записи.

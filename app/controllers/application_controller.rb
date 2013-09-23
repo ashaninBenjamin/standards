@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   include Concerns::FlashHelper
   include Concerns::AuthManagment
-  include Concerns::ParamsManagment
 
   private
 

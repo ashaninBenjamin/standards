@@ -8,6 +8,10 @@
         %ul.nav
           %li
             %a{href: '#'}
+          %li
+            = link_to t('.clients'), admin_clients_path
+          %li
+            = link_to t('.feeds'), admin_feeds_path
 
         .navbar-text.pull-right
           - if admin_signed_in?
