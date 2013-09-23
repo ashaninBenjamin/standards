@@ -1,0 +1,4 @@
+%h1= @standard.name
+.squiggly-border
+= link_to t('.edit_standard'), edit_standard_path(id: @standard.link), class: 'btn btn-info'
+%p.lead= raw @standard.content

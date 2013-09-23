@@ -20,3 +20,8 @@
   color: #800000;
   text-decoration: none;
 }
+
+#native_number {
+  position: absolute;
+  visibility: hidden;
+}
