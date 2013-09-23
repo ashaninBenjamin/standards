@@ -20,6 +20,13 @@ ru:
             home: Домашняя страница
             clients: Клиенты
             feeds: Новости
+    web:
+      global:
+        signed_in:
+          main_menu:
+            standards: Стандарты
+            public_standards: Публичные стандарты
+            feeds: Новости
   web:
     shared:
       action_toolbar:
@@ -66,7 +73,7 @@ ru:
         no_feeds: Новостей ещё не добавлено :(
     public_standards:
       index:
-        header: Доступные стандарты других пользователей.
+        header: Доступные стандарты.
         no_public_standards: К сожалению, в системе ещё нет доступных публичных стандартов.
       show:
         header: Доступный стандарт

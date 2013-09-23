@@ -2,14 +2,14 @@
   .span12.top-stats
     %ul.top-nav-boxes
       %li.first
-        = link_to "#" do
+        = link_to standards_path do
           %i.radmin-bookmark
           %span= t(".standards")
       %li
-        = link_to "#" do
-          %i.radmin-pencil
-          %span= t(".help")
+        = link_to public_standards_path do
+          %i.radmin-broadcast
+          %span= t(".public_standards")
       %li
-        = link_to "#" do
+        = link_to feeds_path do
           %i.radmin-pencil
-          %span= t(".news")
+          %span= t(".feeds")
