@@ -49,6 +49,8 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'ancestry', '~> 2.0.0'
 gem "ckeditor"
+gem "carrierwave"
+gem "mini_magick"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'

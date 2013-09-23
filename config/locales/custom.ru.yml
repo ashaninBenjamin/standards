@@ -18,6 +18,8 @@ ru:
           navbar:
             exit: Выход
             home: Домашняя страница
+            clients: Клиенты
+            feeds: Новости
   web:
     shared:
       action_toolbar:

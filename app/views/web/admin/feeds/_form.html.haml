@@ -2,7 +2,7 @@
   = f.error_notification
   %legend= legend
   = f.input :title
-  = f.input :content
+  = f.input :content, input_html: { class: 'ckeditor', ckeditor: {toolbar: 'My'} }
   .form-actions
     = f.submit class: 'btn btn-success'
     - if @feed.can_publish?
