@@ -51,6 +51,15 @@ ru:
       index:
         header: Стандарты
         no_one_standard: Стандартов ещё нет.
+        new_standard: Добавить стандарт
+      new:
+        header: Добавить новый стандарт
+      edit:
+        header: Редактировать стандарт
+      show:
+        edit_standard: Редактировать стандарт
+      form:
+        select_include_blank: Не принадлежит
     feeds:
       index:
         header: Новости

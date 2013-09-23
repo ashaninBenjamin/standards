@@ -1,7 +1,7 @@
 class StandardEditType < Standard
   include BaseType
 
-  permit :name, :number, :content, :state, :access_state, :access_state_event, :parent_id
+  permit :name, :number, :content, :state, :state_event, :access_state, :access_state_event, :parent_id
 
   def available_numbers
     numbers = parent.node_numbers
