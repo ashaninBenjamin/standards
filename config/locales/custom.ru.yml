@@ -18,6 +18,8 @@ ru:
           navbar:
             exit: Выход
             home: Домашняя страница
+            clients: Клиенты
+            feeds: Новости
   web:
     shared:
       action_toolbar:
@@ -28,6 +30,15 @@ ru:
           header: Клиенты
           no_clients: Нет клиентов
           add_client: Добавить клиента
+      feeds:
+        index:
+          header: Новости
+          no_feeds: Нет новостей
+          add_feed: Добавить новость
+        new:
+          new_feed: Добавление новости
+        edit:
+          edit_feed: Редактирование новости
     sessions:
       new:
         header: Авторизация
@@ -37,5 +48,10 @@ ru:
         header: Регистрация
         sign_in: Зарегистированы?
     standards:
-      header: Стандарты
-      no_one_standard: Стандартов ещё нет.
+      index:
+        header: Стандарты
+        no_one_standard: Стандартов ещё нет.
+    feeds:
+      index:
+        header: Новости
+        no_feeds: Новостей ещё не добавлено :(

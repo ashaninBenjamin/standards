@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require ckeditor/ckeditor
-//= require ckeditor/config
 
 $(document).on("change", "#standard_parent_id", function () {
     var select = $("#standard_number"),

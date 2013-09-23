@@ -9,6 +9,8 @@ ru:
     state: 'Состояние записи'
     created_at: 'Дата создания'
     updated_at: 'Дата обновления'
+    title: Заголовок
+    content: Содержание
 
   activerecord:
     state_machines:
@@ -20,3 +22,15 @@ ru:
           events:
             activate: Активировать
             del: &del Удалить
+      feed:
+        states:
+          published: &published Опубликована
+          unpublished: &unpublished Не опубликована
+        events:
+          publish: &publish Опубликовать
+          unpublish: &unpublish Снять публикацию
+
+    attributes:
+      feed:
+        title: Заголовок
+        content: Содержание
