@@ -30,6 +30,11 @@ group :development do
   gem 'guard-bundler'
   gem 'pry-rails'
   gem 'pre-commit'
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem 'capistrano-ext'
+  gem 'capi'
+  gem 'capistrano-maintenance'
 end
 
 group :development, :test do
