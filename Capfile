@@ -1,6 +1,3 @@
-require 'bundler/capistrano'
-require "rvm/capistrano"
-
 load 'deploy'
 # Uncomment if you are using Rails' asset pipeline
 load 'deploy/assets'
