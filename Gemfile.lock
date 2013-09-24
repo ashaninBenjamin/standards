@@ -294,6 +294,7 @@ DEPENDENCIES
   pre-commit
   pry-rails
   rails (= 4.0.0)
+  rake
   ransack!
   russian
   rvm-capistrano (= 1.2.7)
