@@ -1,3 +1,4 @@
+require 'bundler/capistrano'
 require "rvm/capistrano"
 require 'rake'
 
@@ -31,4 +32,3 @@ after 'deploy:restart', 'unicorn:stop'
 after 'deploy:update', 'deploy:cleanup'
 
 require 'capi/unicorn'
-require 'bundler/capistrano'
