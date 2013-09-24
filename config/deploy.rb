@@ -32,4 +32,3 @@ after 'deploy:update', 'deploy:cleanup'
 
 require 'capi/unicorn'
 require 'bundler/capistrano'
-require 'rake'
