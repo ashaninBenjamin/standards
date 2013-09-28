@@ -35,7 +35,7 @@ div.color-switcher span.green {
 /* Body & Main Elements */
 
 body {
-	background: url('retina_wood.png') repeat;
+	background: url('/assets/retina_wood.png') repeat;
 	font-size: 13px;
 }
 
@@ -152,7 +152,7 @@ a.user-info:hover {
 }
 
 .user-icon {
-	background-image: url('icons/user.png');
+	background-image: url('/assets/icons/user.png');
 	height: 18px;
 	width: 18px;
 }
@@ -469,13 +469,13 @@ h4.title {
 }
 
 div.squiggly-border {
-	background: url('border8.png') repeat-x transparent;
+	background: url('/assets/border8.png') repeat-x transparent;
 	height: 9px;
 	margin-bottom: 20px;
 }
 
 div.speech-bubble-left {
-	background: url('speech-bubble-left.png') no-repeat scroll left top transparent;
+	background: url('/assets/speech-bubble-left.png') no-repeat scroll left top transparent;
 	content: "";
 	height: 14px;
 	width: 7px;
@@ -487,7 +487,7 @@ div.speech-bubble-left {
 }
 
 div.speech-bubble-right {
-	background: url('speech-bubble-right.png') no-repeat scroll left top transparent;
+	background: url('/assets/speech-bubble-right.png') no-repeat scroll left top transparent;
 	content: "";
 	height: 14px;
 	width: 7px;
