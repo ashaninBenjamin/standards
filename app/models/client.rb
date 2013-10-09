@@ -13,8 +13,6 @@ class Client < User
     "#{first_name} #{last_name}"
   end
 
-  private
-
   def add_root
     root = standards.build(name: "root", number: 0)
     root.save
