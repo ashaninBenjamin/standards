@@ -22,6 +22,7 @@ Standards::Application.routes.draw do
       post :copy, on: :member
     end
     resources :feeds, only: [:index, :show]
+    resources :welcome, only: [:index]
   end
 
   namespace :api do

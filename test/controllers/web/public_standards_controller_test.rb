@@ -4,8 +4,9 @@ class Web::PublicStandardsControllerTest < ActionController::TestCase
   setup do
     client = create :client
     sign_in client
+    another_client = create :client
 
-    @public_standard = create :standard, client: client
+    @public_standard = create :standard, client: another_client
     @public_standard.show
     @params = {id: @public_standard.id}
   end
