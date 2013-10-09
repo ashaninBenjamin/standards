@@ -2,7 +2,6 @@ require 'test_helper'
 
 class Web::Admin::ClientsControllerTest < ActionController::TestCase
   setup do
-    @controller = Web::Admin::ClientsController.new
     admin = create :admin
     sign_in admin
     @client = create :client

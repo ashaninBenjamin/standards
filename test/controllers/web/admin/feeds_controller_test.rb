@@ -2,7 +2,6 @@ require 'test_helper'
 
 class Web::Admin::FeedsControllerTest < ActionController::TestCase
   setup do
-    @controller = Web::Admin::FeedsController.new
     admin = create :admin
     sign_in admin
 

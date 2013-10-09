@@ -2,7 +2,6 @@ require 'test_helper'
 
 class Web::FeedsControllerTest < ActionController::TestCase
   setup do
-    @controller = Web::FeedsController.new
     client = create :client
     sign_in client
 

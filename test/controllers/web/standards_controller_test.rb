@@ -2,7 +2,6 @@ require 'test_helper'
 
 class Web::StandardsControllerTest < ActionController::TestCase
   def setup
-    @controller = Web::StandardsController.new
     user = create :client
     sign_in user
     @standard = create :standard, client: user
