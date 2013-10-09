@@ -5,6 +5,7 @@ ru:
         sessions:
           create:
             success: Авторизация прошла успешно.
+            error: Ошибки авторизации.
         feeds:
           create:
             success: Новость успешно добавлена.

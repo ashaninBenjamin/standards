@@ -27,6 +27,13 @@ namespace :deploy do
   end
 end
 
+namespace :remote do
+  desc "remote rake task"
+  task :rake do
+    run "cd #{current_path}; RAILS_ENV=#{rails_env} bundle exec rake #{ENV['TASK']}"
+  end
+end
+
 before 'deploy:finalize_update', 'deploy:symlink_db'
 after 'deploy:restart', 'unicorn:stop'
 after 'deploy:update', 'deploy:cleanup'

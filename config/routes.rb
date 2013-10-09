@@ -1,7 +1,7 @@
 Standards::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   scope module: :web do
-    root to: 'welcome#index'
+    root to: 'standards#index'
     namespace :admin do
       root to: "clients#index"
       resource :session, only: [:new, :create, :destroy]
@@ -22,6 +22,7 @@ Standards::Application.routes.draw do
       post :copy, on: :member
     end
     resources :feeds, only: [:index, :show]
+    resources :welcome, only: [:index]
   end
 
   namespace :api do

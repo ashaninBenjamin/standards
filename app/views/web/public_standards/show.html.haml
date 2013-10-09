@@ -1,5 +1,5 @@
 %h1= t('.header')
 .squiggly-border
-= link_to '.copy', copy_public_standard_path(@public_standard), class: 'btn btn-info'
+= link_to t('.copy'), copy_public_standard_path(@public_standard), method: :post, class: 'btn btn-info'
 %h3= @public_standard.name
 %p.lead= raw @public_standard.content

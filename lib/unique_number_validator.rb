@@ -2,11 +2,11 @@ class UniqueNumberValidator < ActiveModel::EachValidator
   def validate_each(record, attr, value)
     if value.present?
       if value.nonzero?
-        if record.siblings.exclude(record).with(number: value).any?
+        if record.siblings.where('id != ?', record.id).where(number: value).any?
           record.errors.add(attr, :taken)
         end
       else
-        if record.siblings.exclude(record).with(user_id: record.user_id).any?
+        if record.siblings.where('id != ?', record.id).where(user_id: record.user_id).any?
           record.errors.add(attr, :taken)
         end
       end
