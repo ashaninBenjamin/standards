@@ -6,5 +6,5 @@ role :web, "62.76.185.12"
 role :app, "62.76.185.12"
 role :db,  "62.76.185.12", primary: true
 
-set :branch, "develop"
+set :branch, "master"
 set :deploy_to, "/rest/u/apps/standards"
