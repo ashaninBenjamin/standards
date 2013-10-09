@@ -14,14 +14,14 @@ ru:
   layouts:
     web:
       admin:
-        global:
+        shared:
           navbar:
             exit: Выход
             home: Домашняя страница
             clients: Клиенты
             feeds: Новости
     web:
-      global:
+      shared:
         signed_in:
           main_menu:
             standards: Стандарты
