@@ -1,7 +1,7 @@
 Standards::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   scope module: :web do
-    root to: 'welcome#index'
+    root to: 'standards#index'
     namespace :admin do
       root to: "clients#index"
       resource :session, only: [:new, :create, :destroy]
