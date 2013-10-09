@@ -31,7 +31,7 @@ group :development do
   gem 'guard-bundler'
   gem 'pry-rails'
   gem 'pre-commit'
-  gem 'capistrano'
+  gem 'capistrano', '2.15.4'
   gem 'rvm-capistrano', '1.2.7'
   gem 'capistrano-ext'
   gem 'capi'

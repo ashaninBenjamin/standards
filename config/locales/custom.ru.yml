@@ -16,10 +16,10 @@ ru:
       admin:
         shared:
           navbar:
-            exit: Выход
-            home: Домашняя страница
-            clients: Клиенты
-            feeds: Новости
+            exit: 'Выход'
+            home: 'Домашняя страница'
+            clients: 'Клиенты'
+            feeds: 'Новости'
     web:
       shared:
         signed_in:

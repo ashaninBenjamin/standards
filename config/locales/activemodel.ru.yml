@@ -6,3 +6,7 @@ ru:
           attributes:
             password:
               user_or_password_invalid: Пара почтовый ящик/пароль не найдена
+        admin_sign_in_type:
+          attributes:
+            password:
+              user_or_password_invalid: Пара почтовый ящик/пароль не найдена
