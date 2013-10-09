@@ -1,0 +1,10 @@
+!!! 5
+%html
+  %head
+    = render 'layouts/web/admin/shared/head'
+  %body
+    = render 'layouts/web/admin/shared/navbar'
+    .container-fluid
+      .row-fluid
+        = bootstrap_flash
+        = yield

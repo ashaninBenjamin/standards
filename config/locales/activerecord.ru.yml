@@ -1,0 +1,58 @@
+ru:
+  attributes:
+    id: id
+    email: Почта
+    first_name: 'Имя'
+    last_name: 'Фамилия'
+    password: 'Пароль'
+    password_confirmation: 'Подтверждение пароля'
+    state: 'Состояние записи'
+    created_at: 'Дата создания'
+    updated_at: 'Дата обновления'
+    title: Заголовок
+    content: Содержание
+
+  activerecord:
+    state_machines:
+      user:
+        state:
+          states:
+            active: Активна
+            deleted: &deleted Удалена
+          events:
+            activate: Активировать
+            del: &del Удалить
+      feed:
+        states:
+          published: &published Опубликована
+          unpublished: &unpublished Не опубликована
+        events:
+          publish: &publish Опубликовать
+          unpublish: &unpublish Снять публикацию
+      standard:
+        states:
+          refrained: В разработке
+          published: Готовый
+        events:
+          refrain: В разработку
+          publish: В готовые
+        access_state:
+          states:
+            private: Только мне
+            public: Всем
+          events:
+            show: Всем
+            hide: Только мне
+
+
+    attributes:
+      feed:
+        title: Заголовок
+        content: Содержание
+      standard:
+        name: Название
+        parent_id: Родительский
+        number: Номер
+        access_state_event: Доступ
+        state_event: Переместить
+

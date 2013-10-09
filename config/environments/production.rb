@@ -72,9 +72,13 @@ Standards::Application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+  config.assets.initialize_on_precompile = true
+
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.assets.precompile += %w(application_admin.css application_admin.js)
 end

@@ -1,0 +1,14 @@
+- content_for(:not_signed_title) do
+  = t('.header')
+
+= simple_form_for @client, url: client_path, html: {class: 'form-horizontal'} do |f|
+  / TODO через враппер ico_radmin_user, который ещё нужно сделать
+  / wrapper: :ico_radmin_user
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
+  = f.input :first_name
+  = f.input :last_name
+  .form-actions
+    = link_to t('.sign_in'), new_session_path
+    = f.submit class: "btn btn-large btn-inverse pull-right"

@@ -14,7 +14,7 @@ module Standards
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Moscow'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
@@ -22,10 +22,15 @@ module Standards
     config.autoload_paths += %W(#{config.root}/lib)
     config.i18n.default_locale = :ru
 
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    # config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+
     config.generators do |g|
       g.template_engine :haml
       g.stylesheets false
       g.javascripts false
+      g.helper false
     end
   end
 end

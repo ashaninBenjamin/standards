@@ -1,0 +1,8 @@
+= link_to edit_admin_feed_path(feed), title: t(:edit) do
+  %i.icon-edit{title: t(:edit)}
+- if feed.can_publish?
+  = link_to trigger_state_event_admin_feed_path(feed, {event: :publish}), data: {method: :put, confirm: t(:sure)}, title: t(:publish) do
+    %i.icon-share-alt
+- if feed.can_unpublish?
+  = link_to trigger_state_event_admin_feed_path(feed, {event: :unpublish}), data: {method: :put, confirm: t(:sure)}, title: t(:delete) do
+    %i.icon-remove

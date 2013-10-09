@@ -1,0 +1,9 @@
+%h1= t(".header")
+.squiggly-border
+
+.items
+  - if @public_standards.any?
+    - @public_standards.each do |one|
+      .item= link_to one.name, public_standard_path(one)
+  - else
+    = t(".no_public_standards")

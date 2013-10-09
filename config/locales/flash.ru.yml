@@ -1,0 +1,21 @@
+ru:
+  flash:
+    web:
+      admin:
+        sessions:
+          create:
+            success: Авторизация прошла успешно.
+            error: Ошибки авторизации.
+        feeds:
+          create:
+            success: Новость успешно добавлена.
+          update:
+            success: Новость успешно обновлена.
+          trigger_state_event:
+            success: &trigger_success Состояние записи успешно обновлено.
+            error: &trigger_error Произошли ошибки при обновлении состояния записи.
+      standards:
+        create:
+          success: Стандарт успешно добавлен.
+        update:
+          success: Стандарт успешно обновлён.

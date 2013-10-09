@@ -1,0 +1,10 @@
+.toolbar
+  - if link_title && link_path
+    .span3
+      .toolbar-item-content
+        = link_to link_title, link_path, class: "btn"
+  - if collection.num_pages > 1
+    .toolbar-item-content.pull-right
+      .toolbar-item-name #{t('.page')}:
+      .pagination
+        = paginate collection

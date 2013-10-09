@@ -1,0 +1,13 @@
+%h1= t(".header")
+.squiggly-border
+
+.items
+  - if @feeds.any?
+    - @feeds.each do |one|
+      .item
+        = link_to one.title, feed_path(one)
+        &nbsp;&nbsp;&nbsp;
+        %em= l one.updated_at
+        %p= raw one.content
+  - else
+    = t(".no_feeds")

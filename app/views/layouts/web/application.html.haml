@@ -1,0 +1,8 @@
+!!!
+%html
+  %head
+    = render 'layouts/web/shared/head'
+  - if client_signed_in?
+    = render 'layouts/web/shared/signed_in'
+  - else
+    = render 'layouts/web/shared/not_signed'

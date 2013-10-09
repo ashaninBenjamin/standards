@@ -1,0 +1,80 @@
+ru:
+  "yes": 'Да'
+  "no": 'Нет'
+  edit: 'Редактировать'
+  delete: 'Удалить'
+  publish: 'Опубликовать'
+  unpublish: 'Снять с публикации'
+  activate: 'Активировать'
+  sure: 'Вы уверены?'
+  cancel: 'Отмена'
+  control: 'Управление'
+  confirm: 'Подтвердить'
+
+  layouts:
+    web:
+      admin:
+        shared:
+          navbar:
+            exit: 'Выход'
+            home: 'Домашняя страница'
+            clients: 'Клиенты'
+            feeds: 'Новости'
+    web:
+      shared:
+        signed_in:
+          main_menu:
+            standards: Стандарты
+            public_standards: Публичные стандарты
+            feeds: Новости
+  web:
+    shared:
+      action_toolbar:
+        page: Страница
+    admin:
+      clients:
+        index:
+          header: Клиенты
+          no_clients: Нет клиентов
+          add_client: Добавить клиента
+      feeds:
+        index:
+          header: Новости
+          no_feeds: Нет новостей
+          add_feed: Добавить новость
+        new:
+          new_feed: Добавление новости
+        edit:
+          edit_feed: Редактирование новости
+    sessions:
+      new:
+        header: Авторизация
+        new_user: Зарегистироваться?
+    clients:
+      new:
+        header: Регистрация
+        sign_in: Зарегистированы?
+    standards:
+      index:
+        header: Стандарты
+        no_one_standard: Стандартов ещё нет.
+        new_standard: Добавить стандарт
+      new:
+        header: Добавить новый стандарт
+      edit:
+        header: Редактировать стандарт
+      show:
+        edit_standard: Редактировать стандарт
+      form:
+        select_include_blank: Не принадлежит
+    feeds:
+      index:
+        header: Новости
+        no_feeds: Новостей ещё не добавлено :(
+    public_standards:
+      index:
+        header: Доступные стандарты.
+        no_public_standards: К сожалению, в системе ещё нет доступных публичных стандартов.
+      show:
+        header: Доступный стандарт
+        copy: Скопировать в свои стандарты

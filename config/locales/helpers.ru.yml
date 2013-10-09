@@ -1,0 +1,18 @@
+ru:
+  helpers:
+    submit:
+      q:
+        submit: 'Найти'
+      admin_sign_in_type:
+        create: Войти
+      client_sign_in_type:
+        create: Войти
+      client:
+        create: Зарегистировать
+        update: Обновить
+      feed:
+        create: &create Создать
+        update: &update Обновить
+      standard:
+        create: *create
+        update: *update
