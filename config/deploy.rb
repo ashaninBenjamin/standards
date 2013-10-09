@@ -1,7 +1,3 @@
-# require 'bundler/capistrano'
-require "rvm/capistrano"
-require 'rake'
-
 set :stages, %w(production)
 set :default_stage, 'production'
 require 'capistrano/ext/multistage'
@@ -39,3 +35,6 @@ after 'deploy:restart', 'unicorn:stop'
 after 'deploy:update', 'deploy:cleanup'
 
 require 'capi/unicorn'
+require "rvm/capistrano"
+# require 'bundler/capistrano'
+require 'rake'
