@@ -18,7 +18,7 @@ namespace :standards_assets do
     filename = filename.sub /.gz$/, ''          # Remove .gz for correct asset checking
 
     # Fetch the latest digest for this file from assets
-    latest_digest = Rails.application.assets.find_asset(filename).try(:digest)
+    latest_digest = Rails.application.assets.find_asset(filename).digest
 
     # Debug information
     puts '---- ' + file + ' ----'
