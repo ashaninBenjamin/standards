@@ -19,3 +19,9 @@ ru:
           success: Стандарт успешно добавлен.
         update:
           success: Стандарт успешно обновлён.
+        trigger_state_event:
+          success: *trigger_success
+          error: *trigger_error
+        trigger_access_state_event:
+          success: Доступ сменился.
+          error: Ошибки при смене доступа.

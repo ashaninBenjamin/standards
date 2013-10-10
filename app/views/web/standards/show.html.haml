@@ -12,6 +12,16 @@
     = "#{t('.parent')}: "
     = link_to @parent.code_with_name, standard_path(id: @parent.link)
 = link_to t('.edit_standard'), edit_standard_path(id: @standard.link), class: 'btn btn-info'
+%p= t('.change_state')
+- if @standard.can_show?
+  = link_to t(:show), trigger_access_state_event_standard_path(event: :show), method: :put, class: 'btn btn-info'
+- if @standard.can_hide?
+  = link_to t(:hide), trigger_access_state_event_standard_path(event: :hide), method: :put, class: 'btn btn-info'
+%p= t('.change_access_state')
+- if @standard.can_publish?
+  = link_to t(:publish), trigger_state_event_standard_path(event: :publish), method: :put, class: 'btn btn-info'
+- if @standard.can_refrain?
+  = link_to t(:refrain), trigger_state_event_standard_path(event: :refrain), method: :put, class: 'btn btn-info'
 %p.lead= raw @standard.content
 - if @children.any?
   .span6

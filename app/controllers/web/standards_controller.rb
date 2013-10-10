@@ -47,4 +47,28 @@ class Web::StandardsController < Web::ProtectedApplicationController
     @children = Standard.sort_standards_by_code @standard.children
     @parent = @standard.father.try :decorate
   end
+
+  def trigger_state_event
+    @standard = current_client.standards.get_by_link(params[:id])
+
+    if @standard.fire_state_event(params[:event])
+      f(:success)
+    else
+      f(:error)
+    end
+
+    redirect_to action: :index
+  end
+
+  def trigger_access_state_event
+    @standard = current_client.standards.get_by_link(params[:id])
+
+    if @standard.fire_access_state_event(params[:event])
+      f(:success)
+    else
+      f(:error)
+    end
+
+    redirect_to action: :index
+  end
 end
