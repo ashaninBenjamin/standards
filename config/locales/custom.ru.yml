@@ -10,6 +10,10 @@ ru:
   cancel: 'Отмена'
   control: 'Управление'
   confirm: 'Подтвердить'
+  show: Показать всем
+  hide: Скрыть
+  refrain: В разработку
+  publish: В готовые
 
   layouts:
     web:
@@ -65,6 +69,12 @@ ru:
         header: Редактировать стандарт
       show:
         edit_standard: Редактировать стандарт
+        parent: Родительский стандарт
+        children: Дочерние стандарты
+        state: Статус
+        access_state: Доступ
+        change_state: Поменять статус
+        change_access_state: Поменять доступ
       form:
         select_include_blank: Не принадлежит
     feeds:
