@@ -1,7 +1,6 @@
 class Web::StandardsController < Web::ProtectedApplicationController
   def index
-    @q = current_client.standards.stem.ransack(params[:q])
-    @standards = Standard.sort_standards_by_code @q.result(distinct: true).decorate
+    @standards = Standard.sort_standards_by_code current_client.standards.stem.decorate
   end
 
   def new
@@ -46,5 +45,6 @@ class Web::StandardsController < Web::ProtectedApplicationController
   def show
     @standard = current_client.standards.get_by_link(params[:id]).decorate
     @children = Standard.sort_standards_by_code @standard.children
+    @parent = @standard.father.try :decorate
   end
 end

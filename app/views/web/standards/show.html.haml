@@ -1,4 +1,13 @@
 %h1= @standard.code_with_name
 .squiggly-border
+- if @parent
+  %h4
+    = "#{t('.parent')}: "
+    = link_to @parent.code_with_name, standard_path(id: @parent.link)
 = link_to t('.edit_standard'), edit_standard_path(id: @standard.link), class: 'btn btn-info'
 %p.lead= raw @standard.content
+- if @children.any?
+  .span6
+    %h4= "#{t('.children')}:"
+    - @children.each do |child|
+      %h5= link_to child.code_with_name, standard_path(id: child.link)

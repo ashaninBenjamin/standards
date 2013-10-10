@@ -18,6 +18,10 @@ module StandardRepository
       roots.first.descendants
     end
 
+    def father
+      parent if parent.number != 0
+    end
+
     scope :public, -> (user) { where(access_state: :public).where('user_id != ?', user.id) }
   end
 

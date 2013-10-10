@@ -65,6 +65,8 @@ ru:
         header: Редактировать стандарт
       show:
         edit_standard: Редактировать стандарт
+        parent: Родительский стандарт
+        children: Дочерние стандарты
       form:
         select_include_blank: Не принадлежит
     feeds:
