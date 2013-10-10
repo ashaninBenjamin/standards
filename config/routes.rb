@@ -17,6 +17,7 @@ Standards::Application.routes.draw do
     resource :session, only: [:new, :create, :destroy]
     resources :standards, only: [:index, :show, :new, :create, :edit, :update] do
       put :trigger_state_event, on: :member
+      put :trigger_access_state_event, on: :member
     end
     resources :public_standards, only: [:index, :show] do
       post :copy, on: :member
