@@ -1,5 +1,12 @@
 %h1= @standard.code_with_name
 .squiggly-border
+%strong
+  %p
+    = "#{t('.state')}:"
+    = @standard.human_state_name
+  %p
+    = "#{t('.access_state')}:"
+    = @standard.human_access_state_name
 - if @parent
   %h4
     = "#{t('.parent')}: "
