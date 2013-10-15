@@ -37,8 +37,8 @@ ru:
           unpublished: Неопубликованный
           deleted: Удалённый
         events:
-          refrain: В разработку
-          publish: В готовые
+          refrain: В черновики
+          publish: Опубликовать
           activate: Активировать
           del: Удалить
           unpublish: Снять с публикации

@@ -57,6 +57,6 @@ class Web::StandardsController < Web::ProtectedApplicationController
       f(:error)
     end
 
-    redirect_to action: :index
+    redirect_to action: :show
   end
 end

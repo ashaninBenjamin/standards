@@ -9,12 +9,12 @@
   .form-actions
     = f.submit class: "btn btn-success"
     - if @standard.can_refrain?
-      = link_to standard_event_name(:refrain), trigger_state_event_standard_path(@standard, event: :refrain), method: :put, class: 'btn btn-warning'
+      = link_to standard_event_name(:refrain), trigger_state_event_standard_path(id: @standard.link, event: :refrain), method: :put, class: 'btn btn-warning'
     - if @standard.can_activate?
-      = link_to standard_event_name(:activate), trigger_state_event_standard_path(@standard, event: :activate), method: :put, class: 'btn btn-primary'
+      = link_to standard_event_name(:activate), trigger_state_event_standard_path(id: @standard.link, event: :activate), method: :put, class: 'btn btn-primary'
     - if @standard.can_publish?
-      = link_to standard_event_name(:publish), trigger_state_event_standard_path(@standard, event: :publish), method: :put, class: 'btn btn-primary', data: {confirm: t(:sure)}
+      = link_to standard_event_name(:publish), trigger_state_event_standard_path(id: @standard.link, event: :publish), method: :put, class: 'btn btn-primary', data: {confirm: t(:sure)}
     - if @standard.can_unpublish?
-      = link_to standard_event_name(:unpublish), trigger_state_event_standard_path(@standard, event: :unpublish), method: :put, class: 'btn btn-inverse', data: {confirm: t(:sure)}
+      = link_to standard_event_name(:unpublish), trigger_state_event_standard_path(id: @standard.link, event: :unpublish), method: :put, class: 'btn btn-inverse', data: {confirm: t(:sure)}
     - if @standard.can_del?
-      = link_to standard_event_name(:del), trigger_state_event_standard_path(@standard, event: :del), method: :put, class: 'btn btn-danger', data: {confirm: t(:sure)}
+      = link_to standard_event_name(:del), trigger_state_event_standard_path(id: @standard.link, event: :del), method: :put, class: 'btn btn-danger', data: {confirm: t(:sure)}
