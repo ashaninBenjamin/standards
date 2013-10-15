@@ -1,14 +1,13 @@
-%h1= @standard.code_with_name
+%h1
+  = @standard.code_with_name
+  = link_to edit_standard_path(id: @standard.link), title: t('.edit_standard') do
+    %i.icon-edit{title: t('.edit_standard')}
+%p= object_state_label @standard
 .squiggly-border
-%strong
-  %p
-    %strong= "#{t('.state')}: "
-    = object_state_label @standard
 - if @parent
   %h4
     = "#{t('.parent')}: "
     = link_to @parent.code_with_name, standard_path(id: @parent.link)
-= link_to t('.edit_standard'), edit_standard_path(id: @standard.link), class: 'btn btn-info'
 %h3= t('.content')
 %p.lead= raw @standard.content
 - if @children.any?
