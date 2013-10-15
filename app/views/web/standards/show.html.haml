@@ -1,7 +1,7 @@
 %h1
   = @standard.code_with_name
   = link_to edit_standard_path(id: @standard.link), title: t('.edit_standard') do
-    %i.icon-edit{title: t('.edit_standard')}
+    %i.icon-edit
 %p= object_state_label @standard
 .squiggly-border
 - if @parent
