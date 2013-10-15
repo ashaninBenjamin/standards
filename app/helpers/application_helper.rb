@@ -7,7 +7,7 @@ module ApplicationHelper
     lbl = case object.state
             when 'published', 'active'
               'label-success'
-            when 'unpublished', 'new', 'inactive'
+            when 'unpublished', 'new', 'inactive', 'refrained'
               'label-info'
             when 'archived'
               'label-warning'

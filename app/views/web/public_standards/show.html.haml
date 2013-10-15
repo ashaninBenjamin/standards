@@ -1,5 +1,8 @@
-%h1= t('.header')
+%h3= t('.header')
+%h1
+  = @public_standard.name
+  = link_to copy_public_standard_path(@public_standard), method: :post, title: t('.copy') do
+    %i.icon-share
 .squiggly-border
-= link_to t('.copy'), copy_public_standard_path(@public_standard), method: :post, class: 'btn btn-info'
-%h3= @public_standard.name
+%h3= t('.content')
 %p.lead= raw @public_standard.content
