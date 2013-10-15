@@ -1,5 +1,4 @@
 class Standard < ActiveRecord::Base
-  include StandardRepository
   before_save :set_root
 
   has_ancestry
@@ -10,35 +9,34 @@ class Standard < ActiveRecord::Base
   validates :client, presence: true
 
   state_machine :state, initial: :refrained do
-    state :published
     state :refrained
+    state :active
+    state :published
+    state :unpublished
+    state :deleted
 
-    after_transition on: :refrain do |standard, transition|
-      standard.descendants.each { |one| one.refrain }
-      standard.descendants.each { |one| one.hide }
+    event :activate do
+      transition from: [:refrained, :deleted], to: :active, if: :persisted?
     end
 
     event :refrain do
-      transition from: :published, to: :refrained, if: :persisted?
+      transition from: :active, to: :refrained, if: :persisted?
     end
 
     event :publish do
-      transition from: :refrained, to: :published, if: :persisted?
+      transition from: :active, to: :published, if: :persisted?
+    end
+
+    event :del do
+      transition from: [:refrained, :active, :deleted], to: :deleted, if: :persisted?
+    end
+
+    event :unpublish do
+      transition from: :published, to: :active, if: :persisted?
     end
   end
 
-  state_machine :access_state, initial: :private do
-    state :private
-    state :public
-
-    event :hide do
-      transition from: :public, to: :private, if: :persisted?
-    end
-
-    event :show do
-      transition from: :private, to: :public, if: :persisted?
-    end
-  end
+  include StandardRepository
 
   def self.sort_standards_by_code(standards)
     standards.sort_by { |a| a.code.split('.').map &:to_i }

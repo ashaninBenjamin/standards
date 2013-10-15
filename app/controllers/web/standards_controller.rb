@@ -57,18 +57,6 @@ class Web::StandardsController < Web::ProtectedApplicationController
       f(:error)
     end
 
-    redirect_to action: :index
-  end
-
-  def trigger_access_state_event
-    @standard = current_client.standards.get_by_link(params[:id])
-
-    if @standard.fire_access_state_event(params[:event])
-      f(:success)
-    else
-      f(:error)
-    end
-
-    redirect_to action: :index
+    redirect_to action: :show
   end
 end

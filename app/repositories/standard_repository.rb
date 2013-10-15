@@ -3,6 +3,10 @@ module StandardRepository
   include BaseRepository
 
   included do
+    state_machine.states.each do |s|
+      scope s.name, -> { where(state: s.name) }
+    end
+
     def self.get_by_link(link)
       numbers = link.split('-').map { |number_s| number_s.to_i }
 
@@ -22,7 +26,7 @@ module StandardRepository
       parent if parent.number != 0
     end
 
-    scope :public, -> (user) { where(access_state: :public).where('user_id != ?', user.id) }
+    scope :public, -> (user) { published.where('user_id != ?', user.id) }
   end
 
 end

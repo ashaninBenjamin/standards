@@ -71,10 +71,7 @@ ru:
         edit_standard: Редактировать стандарт
         parent: Родительский стандарт
         children: Дочерние стандарты
-        state: Статус
-        access_state: Доступ
-        change_state: Поменять статус
-        change_access_state: Поменять доступ
+        content: Содержание
       form:
         select_include_blank: Не принадлежит
     feeds:
@@ -86,5 +83,6 @@ ru:
         header: Доступные стандарты.
         no_public_standards: К сожалению, в системе ещё нет доступных публичных стандартов.
       show:
-        header: Доступный стандарт
+        header: Публичный стандарт
         copy: Скопировать в свои стандарты
+        content: Содержание
