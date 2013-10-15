@@ -22,3 +22,7 @@ ru:
         trigger_state_event:
           success: *trigger_success
           error: *trigger_error
+      public_standards:
+        copy:
+          success: Публичный стандарт успешно скопирован.
+          error: Произошли ошибки при копировании стандарта.

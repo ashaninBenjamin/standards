@@ -8,16 +8,19 @@ class Web::PublicStandardsController < Web::ProtectedApplicationController
   end
 
   def copy
-    public_standard = Standard.public(current_client).find(params[:id])
-    copied = public_standard.dup
+    @public_standard = Standard.public(current_client).find(params[:id])
+    #TODO make via gem amoeba
+    copied = @public_standard.dup
     copied.client = current_client
     copied.number = current_client.standards.roots.first.available_number
     copied.parent = current_client.standards.roots.first
 
     if copied.save
-      redirect_to action: :index
+      f :success
+      redirect_to standard_path(id: copied.link)
     else
-      redirect_to action: :index
+      f :error
+      redirect_to public_standard_path(@public_standard)
     end
 
   end
