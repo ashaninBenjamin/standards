@@ -7,7 +7,8 @@ class Web::PublicStandardsControllerTest < ActionController::TestCase
     another_client = create :client
 
     @public_standard = create :standard, client: another_client
-    @public_standard.show
+    @public_standard.activate
+    @public_standard.publish
     @params = {id: @public_standard.id}
   end
   test "should get index" do

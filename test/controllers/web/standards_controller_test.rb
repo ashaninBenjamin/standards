@@ -46,19 +46,11 @@ class Web::StandardsControllerTest < ActionController::TestCase
   end
 
   test "should change state" do
-    put :trigger_state_event, @params.merge(event: :publish)
+    put :trigger_state_event, @params.merge(event: :activate)
     assert_response :redirect
 
     @standard.reload
-    assert { @standard.published? }
-  end
-
-  test "should access change state" do
-    put :trigger_access_state_event, @params.merge(event: :show)
-    assert_response :redirect
-
-    @standard.reload
-    assert { @standard.public? }
+    assert { @standard.active? }
   end
 
 end

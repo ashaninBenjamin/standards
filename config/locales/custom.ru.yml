@@ -71,10 +71,8 @@ ru:
         edit_standard: Редактировать стандарт
         parent: Родительский стандарт
         children: Дочерние стандарты
-        state: Статус
-        access_state: Доступ
-        change_state: Поменять статус
-        change_access_state: Поменять доступ
+        content: Содержание
+        state: Состояние
       form:
         select_include_blank: Не принадлежит
     feeds:

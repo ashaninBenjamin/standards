@@ -5,7 +5,16 @@
   = f.input :number, collection: @available_numbers, include_blank: false
   = f.input :content, input_html: { class: 'ckeditor', ckeditor: {toolbar: 'My'} }
   - if f.object.persisted?
-    = f.input :access_state_event, collection: f.object.access_state_transitions.map {|s| [s.human_event, s.event]}
     = f.input :state_event, collection: f.object.state_transitions.map {|s| [s.human_event, s.event]}
   .form-actions
     = f.submit class: "btn btn-success"
+    - if @standard.can_refrain?
+      = link_to standard_event_name(:refrain), trigger_state_event_standard_path(@standard, event: :refrain), method: :put, class: 'btn btn-warning'
+    - if @standard.can_activate?
+      = link_to standard_event_name(:activate), trigger_state_event_standard_path(@standard, event: :activate), method: :put, class: 'btn btn-primary'
+    - if @standard.can_publish?
+      = link_to standard_event_name(:publish), trigger_state_event_standard_path(@standard, event: :publish), method: :put, class: 'btn btn-primary', data: {confirm: t(:sure)}
+    - if @standard.can_unpublish?
+      = link_to standard_event_name(:unpublish), trigger_state_event_standard_path(@standard, event: :unpublish), method: :put, class: 'btn btn-inverse', data: {confirm: t(:sure)}
+    - if @standard.can_del?
+      = link_to standard_event_name(:del), trigger_state_event_standard_path(@standard, event: :del), method: :put, class: 'btn btn-danger', data: {confirm: t(:sure)}

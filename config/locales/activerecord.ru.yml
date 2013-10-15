@@ -32,18 +32,16 @@ ru:
       standard:
         states:
           refrained: В разработке
-          published: Готовый
+          active: Активный
+          published: Публичный
+          unpublished: Неопубликованный
+          deleted: Удалённый
         events:
           refrain: В разработку
           publish: В готовые
-        access_state:
-          states:
-            private: Только мне
-            public: Всем
-          events:
-            show: Всем
-            hide: Только мне
-
+          activate: Активировать
+          del: Удалить
+          unpublish: Снять с публикации
 
     attributes:
       feed:
@@ -53,6 +51,5 @@ ru:
         name: Название
         parent_id: Родительский
         number: Номер
-        access_state_event: Доступ
-        state_event: Переместить
+        state_event: Состояние записи
 
