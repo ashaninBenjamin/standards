@@ -1,4 +1,4 @@
-class Web::HelpsController < ApplicationController
+class Web::HelpsController < Web::ApplicationController
   def new
     @help = HelpType.new
   end
