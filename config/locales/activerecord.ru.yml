@@ -34,7 +34,6 @@ ru:
           refrained: В разработке
           active: Активный
           published: Публичный
-          unpublished: Неопубликованный
           deleted: Удалённый
         events:
           refrain: В черновики
