@@ -1,2 +1,6 @@
-%h1 Web::Passwords#new
-%p Find me in app/views/web/passwords/new.html.haml
+- content_for(:not_signed_title) do
+  = t('.header')
+= simple_form_for @type, url: password_path, html:{class: "form-horizontal"} do |f|
+  = f.input :email
+  .form-actions
+    = f.submit class: 'btn btn-success pull-right'

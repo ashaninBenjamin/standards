@@ -95,3 +95,6 @@ ru:
       new:
         header: Обращение в тех.поддержку
         sign_in: Авторизация
+    passwords:
+      new:
+        header: Новый пароль
