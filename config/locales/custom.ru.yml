@@ -97,4 +97,6 @@ ru:
         sign_in: Авторизация
     passwords:
       new:
-        header: Новый пароль
+        header: Восстановление пароля
+      edit:
+        header: Установить пароль
