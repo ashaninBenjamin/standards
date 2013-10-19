@@ -35,4 +35,8 @@ Standards::Application.configure do
   config.active_support.deprecation = :stderr
 
   config.assets.initialize_on_precompile = true
+
+  ActionDispatch::Reloader.to_prepare do
+    load Rails.root.join('config/configus.rb')
+  end
 end

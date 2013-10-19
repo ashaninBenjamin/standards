@@ -28,4 +28,8 @@ Standards::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  ActionDispatch::Reloader.to_prepare do
+    load Rails.root.join('config/configus.rb')
+  end
 end
