@@ -23,6 +23,7 @@ Standards::Application.routes.draw do
     end
     resources :feeds, only: [:index, :show]
     resources :welcome, only: [:index]
+    resource :help, only: [:new, :create]
   end
 
   namespace :api do
