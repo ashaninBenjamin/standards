@@ -11,6 +11,9 @@ ru:
     updated_at: 'Дата обновления'
     title: Заголовок
     content: Содержание
+    name: Имя
+    subject: Тема
+    message: Сообщение
 
   activerecord:
     state_machines:
