@@ -12,7 +12,6 @@ class Standard < ActiveRecord::Base
     state :refrained
     state :active
     state :published
-    state :unpublished
     state :deleted
 
     event :activate do
@@ -20,7 +19,7 @@ class Standard < ActiveRecord::Base
     end
 
     event :refrain do
-      transition from: :active, to: :refrained, if: :persisted?
+      transition from: [:deleted, :active], to: :refrained, if: :persisted?
     end
 
     event :publish do

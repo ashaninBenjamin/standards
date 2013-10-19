@@ -31,6 +31,11 @@ ru:
             standards: Стандарты
             public_standards: Публичные стандарты
             feeds: Новости
+          toolbar:
+            help_me: Обращение в тех.поддержку
+        not_signed:
+          header: Стандарты
+          help_me: Обращение в тех.поддержку
   web:
     shared:
       action_toolbar:
@@ -86,3 +91,7 @@ ru:
         header: Публичный стандарт
         copy: Скопировать в свои стандарты
         content: Содержание
+    helps:
+      new:
+        header: Обращение в тех.поддержку
+        sign_in: Авторизация

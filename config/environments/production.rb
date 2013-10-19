@@ -83,4 +83,11 @@ Standards::Application.configure do
   config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   config.assets.precompile += %w(application_admin.css application_admin.js ckeditor/*)
   config.assets.precompile += Ckeditor.assets
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:                 "127.0.0.1",
+    port:                    25,
+    enable_starttls_auto:    false
+  }
 end

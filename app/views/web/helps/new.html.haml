@@ -1,0 +1,20 @@
+- #FIXME
+- if client_signed_in?
+  %h1= t('.header')
+  .squiggly-border
+- else
+  - content_for(:not_signed_title) do
+    = t('.header')
+= simple_form_for @help, url: help_path, html:{class: "form-horizontal"} do |f|
+  = f.input :email
+  = f.input :name
+  = f.input :subject
+  = f.input :message, as: :text
+  - if client_signed_in?
+    .control-group
+      .controls
+        = f.submit class: 'btn btn-success'
+  - else
+    .form-actions
+      = link_to t('.sign_in'), new_session_path, class: 'pull-left'
+      = f.submit class: 'btn btn-success btn-success pull-right'
