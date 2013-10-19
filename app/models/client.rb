@@ -18,4 +18,8 @@ class Client < User
     root = standards.build(name: "root", number: 0)
     root.save
   end
+
+  def generate_confirmation_token
+    self.confirmation_token = Token.generate
+  end
 end
