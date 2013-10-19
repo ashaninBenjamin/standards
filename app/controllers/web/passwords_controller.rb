@@ -9,7 +9,7 @@ class Web::PasswordsController < Web::ApplicationController
       client = @type.client
       client.generate_confirmation_token
       client.save!
-      # SubscribersMailer.reset_password_instructions_send(client)
+      ClientPasswordMailer.reset_password_instructions(client).deliver
       redirect_to root_path
       f :success
     else

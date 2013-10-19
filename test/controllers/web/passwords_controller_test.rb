@@ -16,6 +16,8 @@ class Web::PasswordsControllerTest < ActionController::TestCase
     attrs[:email] = @client.email
     post :create, client_new_password_type: attrs
     assert_response :redirect
+
+    assert { ActionMailer::Base.deliveries.any? }
   end
 
   test "should get edit" do
