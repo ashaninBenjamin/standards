@@ -4,7 +4,8 @@
       .span4
       .span4.login-span
         .login-radmin.align-center
-          %h1.brand Стандарты
+          %h1.brand= t('.header')
+          %p= link_to t('.help_me'), new_help_path
         .login-wrapper
           .login-inner
             - if content_for?(:not_signed_title)

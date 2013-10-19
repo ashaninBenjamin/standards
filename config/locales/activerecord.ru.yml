@@ -13,7 +13,7 @@ ru:
     content: Содержание
     name: Имя
     subject: Тема
-    message: Сообщение
+    message: Текст
 
   activerecord:
     state_machines:

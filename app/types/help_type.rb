@@ -9,4 +9,5 @@ class HelpType
   validates :email, presence: true, email: true
   validates :name, presence: true
   validates :message, presence: true
+  validates :subject, presence: true
 end
