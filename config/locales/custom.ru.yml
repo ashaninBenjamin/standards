@@ -59,6 +59,7 @@ ru:
       new:
         header: Авторизация
         new_user: Зарегистироваться?
+        new_password: Забыли пароль?
     clients:
       new:
         header: Регистрация
