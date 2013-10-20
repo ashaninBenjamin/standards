@@ -18,3 +18,5 @@ ru:
         update: *update
       help_type:
         create: Отправить
+      client_new_password_type:
+        create: Восстановить пароль

@@ -6,6 +6,7 @@ class Client < User
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :password, confirmation: true
 
   after_create :add_root
 
@@ -16,5 +17,9 @@ class Client < User
   def add_root
     root = standards.build(name: "root", number: 0)
     root.save
+  end
+
+  def generate_confirmation_token
+    self.confirmation_token = Token.generate
   end
 end
