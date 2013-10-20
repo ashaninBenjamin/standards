@@ -14,5 +14,8 @@
   = f.input :email
   = f.input :password
   .form-actions
-    = link_to t(".new_user"), new_client_path, class: 'btn-link pull-left'
-    = f.submit class: "btn btn-large btn-inverse pull-right"
+    .span4
+      = link_to t(".new_user"), new_client_path, class: 'btn-link pull-left'
+      = link_to t(".new_password"), new_password_path, class: 'btn-link pull-left'
+    .span8
+      = f.submit class: "btn btn-large btn-inverse pull-right"
