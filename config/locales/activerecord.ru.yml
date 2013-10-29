@@ -4,6 +4,7 @@ ru:
     email: Почта
     first_name: 'Имя'
     last_name: 'Фамилия'
+    names: ФИО
     password: 'Пароль'
     password_confirmation: 'Подтверждение пароля'
     state: 'Состояние записи'

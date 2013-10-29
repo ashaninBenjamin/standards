@@ -3,6 +3,6 @@ class ClientType < Client
 
   has_secure_password
 
-  permit :email, :password, :password_confirmation, :first_name, :last_name
+  permit :email, :password, :password_confirmation, :names
 
 end

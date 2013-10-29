@@ -4,8 +4,7 @@ class Client < User
 
   has_many :standards, foreign_key: 'user_id'
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :names, presence: true
   validates :password, confirmation: true
 
   after_create :add_root
