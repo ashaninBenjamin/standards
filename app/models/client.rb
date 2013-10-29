@@ -11,7 +11,7 @@ class Client < User
   after_create :add_root
 
   def to_s
-    "#{first_name} #{last_name}"
+    names
   end
 
   def add_root
