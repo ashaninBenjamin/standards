@@ -55,4 +55,9 @@ ru:
         parent_id: Родительский
         number: Номер
         state_event: Состояние записи
+      client:
+        opf: ОПФ
+        company_name: Компания
+        company_city: Город
+        phone_number: Телефон
 

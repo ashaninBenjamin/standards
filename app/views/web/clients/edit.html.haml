@@ -3,4 +3,8 @@
 = simple_form_for @client, action: :update, html: {class: 'form-horizontal'} do |f|
   = f.input :email
   = f.input :names
+  = f.input :opf
+  = f.input :company_name
+  = f.input :company_city
+  = f.input :phone_number
   = f.submit class: 'btn btn-success'
