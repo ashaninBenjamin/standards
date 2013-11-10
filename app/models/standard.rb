@@ -3,6 +3,8 @@ class Standard < ActiveRecord::Base
 
   has_ancestry
   belongs_to :client, foreign_key: 'user_id'
+  has_many :copied_to, class_name: self.name
+  belongs_to :copied_from, class_name: self.name, foreign_key: 'copied_from_id'
 
   validates :name, presence: true
   validates :number, presence: true, unique_number: true
