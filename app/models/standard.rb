@@ -91,7 +91,6 @@ class Standard < ActiveRecord::Base
 
   #FIXME через 'self.previous_changes[:old_name]'
   def set_previous
-    return unless self.can_restore?
     self.old_name = self.name
     self.old_content = self.content
   end
