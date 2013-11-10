@@ -2,3 +2,6 @@ ru:
   time:
     formats:
       default: ! '%a, %d %b %Y, %H:%M:%S'
+  registration_mailer:
+    information:
+      subject: 'Регистрация на сайте стандартов.'
