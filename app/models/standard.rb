@@ -89,12 +89,12 @@ class Standard < ActiveRecord::Base
     self.content = self.old_content
   end
 
-  #FIXME через 'self.previous_changes[:old_name]'
   def set_previous
     self.old_name = self.name
     self.old_content = self.content
   end
 
+  #FIXME вынести в декоратор
   def can_restore?
     self.old_name.present? || self.old_content.present?
   end
