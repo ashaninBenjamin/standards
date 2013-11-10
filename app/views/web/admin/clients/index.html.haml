@@ -6,8 +6,7 @@
         - with_options per_page: params[:per_page] do |c|
           %th= c.sort_link @q, :id
           %th= c.sort_link @q, :email
-          %th= c.sort_link @q, :first_name
-          %th= c.sort_link @q, :last_name
+          %th= c.sort_link @q, :names
           %th= c.sort_link @q, :state
           %th= c.sort_link @q, :created_at
         %th= t(:control)
@@ -16,8 +15,7 @@
         %tr
           %td= client.id
           %td= client.email
-          %td= client.first_name
-          %td= client.last_name
+          %td= client.names
           %td= object_state_label client
           %td= l client.created_at
           %td= render 'control_panel', client: client

@@ -53,4 +53,11 @@ class Web::StandardsControllerTest < ActionController::TestCase
     assert { @standard.active? }
   end
 
+  test "should put restore" do
+    put :restore, @params
+    assert_response :redirect
+
+    @standard.reload
+    assert { @standard.name.eql? @standard.old_name }
+  end
 end

@@ -14,6 +14,9 @@ class Web::PublicStandardsController < Web::ProtectedApplicationController
     copied.client = current_client
     copied.number = current_client.standards.roots.first.available_number
     copied.parent = current_client.standards.roots.first
+    copied.copied_from = @public_standard
+    copied.old_name = @public_standard.name
+    copied.old_content = @public_standard.content
 
     if copied.save
       f :success

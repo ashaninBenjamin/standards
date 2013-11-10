@@ -22,6 +22,9 @@ ru:
         trigger_state_event:
           success: *trigger_success
           error: *trigger_error
+        restore:
+          success: Стандарт успешно восстановлен.
+          error: Возникли ошибки при восстановлении.
       public_standards:
         copy:
           success: Публичный стандарт успешно скопирован.

@@ -3,6 +3,8 @@ class Standard < ActiveRecord::Base
 
   has_ancestry
   belongs_to :client, foreign_key: 'user_id'
+  has_many :copied_to, class_name: self.name
+  belongs_to :copied_from, class_name: self.name, foreign_key: 'copied_from_id'
 
   validates :name, presence: true
   validates :number, presence: true, unique_number: true
@@ -79,6 +81,22 @@ class Standard < ActiveRecord::Base
 
   def to_s
     name
+  end
+
+  #FIXME через 'self.previous_changes[:old_name]'
+  def restore_previous
+    self.name = self.old_name
+    self.content = self.old_content
+  end
+
+  def set_previous
+    self.old_name = self.name
+    self.old_content = self.content
+  end
+
+  #FIXME вынести в декоратор
+  def can_restore?
+    self.old_name.present? || self.old_content.present?
   end
 
   private

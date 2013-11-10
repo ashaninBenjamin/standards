@@ -18,7 +18,9 @@ class Web::ClientsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     client = Client.last
-    assert { client.first_name.eql? attrs[:client][:first_name] }
+    assert { client.names.eql? attrs[:client][:names] }
+
+    assert { ActionMailer::Base.deliveries.any? }
   end
 
   test "should get edit" do
@@ -33,14 +35,14 @@ class Web::ClientsControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test "shoud patch update" do
+  test "should patch update" do
     sign_in @client
 
     @params[:client] = attributes_for(:client)
     patch :update, @params
 
     @client.reload
-    assert { @client.first_name.eql? @params[:client][:first_name] }
+    assert { @client.names.eql? @params[:client][:names] }
   end
 
 end

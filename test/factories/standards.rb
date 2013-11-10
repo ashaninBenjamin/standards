@@ -11,6 +11,7 @@ FactoryGirl.define do
     number 1
     name
     content
+    old_name
   end
 
   factory :one_another_standard, class: Standard do

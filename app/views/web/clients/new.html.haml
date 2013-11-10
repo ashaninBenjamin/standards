@@ -7,8 +7,11 @@
   = f.input :email
   = f.input :password
   = f.input :password_confirmation
-  = f.input :first_name
-  = f.input :last_name
+  = f.input :names
+  = f.input :opf
+  = f.input :company_name
+  = f.input :company_city
+  = f.input :phone_number
   .form-actions
     = link_to t('.sign_in'), new_session_path
     = f.submit class: "btn btn-large btn-inverse pull-right"
