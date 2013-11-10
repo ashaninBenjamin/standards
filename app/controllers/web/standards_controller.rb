@@ -34,6 +34,7 @@ class Web::StandardsController < Web::ProtectedApplicationController
     @standard = @standard.becomes(StandardEditType)
     @available_numbers = @standard.available_numbers
     @available_parents = Standard.sort_standards_by_code @standard.available_parents(current_client).decorate
+    @standard.set_previous
     if @standard.update_attributes(params[:standard])
       redirect_to standard_path(@standard.link)
       f :success
