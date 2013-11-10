@@ -26,7 +26,10 @@ module StandardRepository
       parent if parent.number != 0
     end
 
-    scope :public, -> (user) { published.where('user_id != ?', user.id) }
+    scope :public, -> (user) {
+      copied_from_ids = user.standards.map(&:copied_from_id) - [nil]
+      published.where('user_id != ?', user.id).where('id NOT IN (?)', copied_from_ids.any? ? copied_from_ids : 0)
+    }
   end
 
 end
