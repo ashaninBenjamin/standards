@@ -59,4 +59,17 @@ class Web::StandardsController < Web::ProtectedApplicationController
 
     redirect_to action: :show
   end
+
+  def restore
+    @standard = current_client.standards.get_by_link(params[:id])
+    @standard.restore_previous
+
+    if @standard.save
+      f :success
+      redirect_to action: :show
+    else
+      f :error
+      render action: :edit
+    end
+  end
 end

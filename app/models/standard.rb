@@ -83,6 +83,11 @@ class Standard < ActiveRecord::Base
     name
   end
 
+  def restore_previous
+    self.name = self.old_name
+    self.content = self.old_content
+  end
+
   private
 
   def set_root
