@@ -18,3 +18,5 @@
       = link_to standard_event_name(:unpublish), trigger_state_event_standard_path(id: @standard.link, event: :unpublish), method: :put, class: 'btn btn-inverse', data: {confirm: t(:sure)}
     - if @standard.can_del?
       = link_to standard_event_name(:del), trigger_state_event_standard_path(id: @standard.link, event: :del), method: :put, class: 'btn btn-danger', data: {confirm: t(:sure)}
+    - if f.object.persisted? && f.object.can_restore?
+      = link_to t('.restore'), restore_standard_path(id: @standard.link), method: :put, class: 'btn btn-info', data: {confirm: t(:sure)}
