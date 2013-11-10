@@ -9,6 +9,7 @@ class Web::ClientsController < Web::ApplicationController
     @client = ClientType.new(params[:client])
     if @client.save
       sign_in @client
+      RegistrationMailer.information(@client.email).deliver
       redirect_to root_path
     else
       render action: :new

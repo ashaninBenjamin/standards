@@ -19,6 +19,8 @@ class Web::ClientsControllerTest < ActionController::TestCase
 
     client = Client.last
     assert { client.names.eql? attrs[:client][:names] }
+
+    assert { ActionMailer::Base.deliveries.any? }
   end
 
   test "should get edit" do
