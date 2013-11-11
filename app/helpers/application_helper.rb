@@ -18,6 +18,6 @@ module ApplicationHelper
   end
 
   def tags
-    configus.tags.all
+    configus.tags.to_hash.values
   end
 end
