@@ -2,6 +2,7 @@
 - if client_signed_in?
   %h1= t('.header')
   .squiggly-border
+  %h4= t('.feedback')
 - else
   - content_for(:not_signed_title) do
     = t('.header')
