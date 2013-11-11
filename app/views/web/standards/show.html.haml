@@ -9,7 +9,7 @@
     = "#{t('.parent')}: "
     = link_to @parent.code_with_name, standard_path(id: @parent.link)
 %h3= t('.content')
-%p.lead= raw @standard.content
+%p.lead= raw @standard.corrected_content
 - if @children.any?
   .span6
     %h4= "#{t('.children')}:"
