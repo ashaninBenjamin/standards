@@ -4,6 +4,7 @@
   = f.input :parent_id, collection: @available_parents.collect {|p| [ p.for_select, p.id ] }, include_blank: false
   = f.input :number, collection: @available_numbers, include_blank: false
   = f.input :content, input_html: { class: 'ckeditor', ckeditor: {toolbar: 'My'} }
+  = render 'tags'
   - if f.object.persisted?
     = f.input :state_event, collection: f.object.state_transitions.map {|s| [s.human_event, s.event]}
   .form-actions

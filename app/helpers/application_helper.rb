@@ -16,4 +16,8 @@ module ApplicationHelper
           end
     content_tag(:span, object.human_state_name, {class: "label #{lbl}"})
   end
+
+  def tags
+    configus.tags.to_hash.values
+  end
 end
