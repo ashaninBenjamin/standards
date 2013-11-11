@@ -81,6 +81,8 @@ ru:
       form:
         select_include_blank: Не принадлежит
         restore: Восстановить
+      tags:
+        tags: Доступные теги
     feeds:
       index:
         header: Новости

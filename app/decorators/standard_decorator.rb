@@ -16,4 +16,13 @@ class StandardDecorator < Draper::Decorator
   def code_with_name
     "#{code}. #{name}"
   end
+
+  def corrected_content
+    result = content
+    configus.tags.to_hash.each_pair do |key, value|
+      replacement = h.current_client.send(key)
+      result = result.gsub(value, replacement) if replacement.present?
+    end
+    result
+  end
 end
