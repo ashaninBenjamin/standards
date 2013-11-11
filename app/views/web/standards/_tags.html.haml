@@ -1,0 +1,7 @@
+.row_fluid
+  .span2
+  .span10
+    %h5= t('.tags')
+    %ul{type: 'disc'}
+      - tags.each do |tag|
+        %li= tag
