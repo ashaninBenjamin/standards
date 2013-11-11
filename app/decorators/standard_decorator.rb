@@ -20,7 +20,8 @@ class StandardDecorator < Draper::Decorator
   def corrected_content
     result = content
     configus.tags.to_hash.each_pair do |key, value|
-      result = result.gsub(value, h.current_client.send(key))
+      replacement = h.current_client.send(key)
+      result = result.gsub(value, replacement) if replacement.present?
     end
     result
   end
