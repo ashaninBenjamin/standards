@@ -30,6 +30,8 @@ module StandardRepository
       copied_from_ids = user.standards.map(&:copied_from_id) - [nil]
       published.where('user_id != ?', user.id).where('id NOT IN (?)', copied_from_ids.any? ? copied_from_ids : 0)
     }
+
+    scope :several, -> (ids) { ids ? where(id: ids) : all }
   end
 
 end

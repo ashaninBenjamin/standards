@@ -1,6 +1,7 @@
 class Pdf::StandardsController < Pdf::ApplicationController
   def index
-    @standards = Standard.sort_standards_by_code current_client.standards.stem.decorate
+    ids = params[:ids].split(',') if params[:ids]
+    @standards = Standard.sort_standards_by_code current_client.standards.stem.several(ids).decorate
   end
 
   def show
