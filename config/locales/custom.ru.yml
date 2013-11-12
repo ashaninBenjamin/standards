@@ -69,6 +69,7 @@ ru:
         header: Стандарты
         no_one_standard: Стандартов ещё нет.
         new_standard: Добавить стандарт
+        download_pdf: Скачать в формате pdf
       new:
         header: Добавить новый стандарт
       edit:
@@ -78,6 +79,7 @@ ru:
         parent: Родительский стандарт
         children: Дочерние стандарты
         content: Содержание
+        download_pdf: Скачать в формате pdf
       form:
         select_include_blank: Не принадлежит
         restore: Восстановить
