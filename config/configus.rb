@@ -6,6 +6,7 @@ Configus.build Rails.env do
     end
     techical_support_email '1standard.dev@gmail.com'
     tags Hash[opf: "%опф%", company_name: "%компания%", company_city: "%город%", phone_number: "%телефон%"]
+    host 'http://1standart.com/'
   end
 
   env :development, parent: :production
