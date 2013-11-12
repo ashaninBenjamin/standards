@@ -18,6 +18,7 @@ gem 'draper'
 gem 'virtus'
 gem 'kaminari'
 gem 'usefull_scopes', github: 'kaize/usefull_scopes'
+gem 'pdfkit'
 
 # Use sqlite3 as the database for Active Record
 

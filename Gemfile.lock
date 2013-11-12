@@ -152,6 +152,7 @@ GEM
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     orm_adapter (0.4.0)
+    pdfkit (0.5.4)
     pg (0.17.0)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
@@ -291,6 +292,7 @@ DEPENDENCIES
   kaminari
   mini_magick
   minitest
+  pdfkit
   pg
   pre-commit
   pry-rails

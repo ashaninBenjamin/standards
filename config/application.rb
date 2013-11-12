@@ -27,12 +27,13 @@ module Standards
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     # config.assets.precompile += %w( .svg .eot .woff .ttf )
 
-
     config.generators do |g|
       g.template_engine :haml
       g.stylesheets false
       g.javascripts false
       g.helper false
     end
+
+    config.middleware.use PDFKit::Middleware
   end
 end
