@@ -34,6 +34,6 @@ module Standards
       g.helper false
     end
 
-    config.middleware.use PDFKit::Middleware
+    config.middleware.use PDFKit::Middleware, {}, only: '/pdf/standards'
   end
 end
