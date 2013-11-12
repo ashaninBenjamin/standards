@@ -105,3 +105,8 @@ ru:
         header: Восстановление пароля
       edit:
         header: Установить пароль
+  pdf:
+    standards:
+      index:
+        header: Стандарты
+        no_one_standard: Нет стандартов

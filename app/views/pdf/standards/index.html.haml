@@ -1,2 +1,8 @@
-%h1 Pdf::Standards#index
-%p Find me in app/views/pdf/standards/index.html.haml
+%h1= t(".header")
+- if @standards.any?
+  - @standards.each do |standard|
+    %p{style: "margin-left:#{(standard.depth - 1) * 20}px;"}
+      %h3= standard.code_with_name
+      %p= raw standard.corrected_content
+- else
+  = t(".no_one_standard")

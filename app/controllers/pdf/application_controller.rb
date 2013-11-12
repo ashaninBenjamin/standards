@@ -1,2 +1,2 @@
-class Pdf::ApplicationController < Web::ApplicationController
+class Pdf::ApplicationController < Web::ProtectedApplicationController
 end

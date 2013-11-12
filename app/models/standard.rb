@@ -39,6 +39,7 @@ class Standard < ActiveRecord::Base
 
   include StandardRepository
 
+  #TODO лучше вынести в хелпер или декоратор
   def self.sort_standards_by_code(standards)
     standards.sort_by { |a| a.code.split('.').map &:to_i }
   end
