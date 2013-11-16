@@ -1,6 +1,6 @@
 %h1
   = t(".header")
-  = link_to pdf_standards_path(format: :pdf), title: t('.download_pdf'), target: '_blank' do
+  %a{"data-toggle" => "modal", href: "#pdf_box", role: "button"}
     %i.icon-download-alt
 .squiggly-border
 = link_to t('.new_standard'), new_standard_path, class: 'btn btn-info'
@@ -12,3 +12,17 @@
       .item= link_to one.code_with_name, standard_path(one.link), style: "margin-left:#{(one.depth - 1) * 20}px;"
   - else
     = t(".no_one_standard")
+
+#pdf_box.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-header
+    %h3#myModalLabel Генерация pdf
+  .modal-body
+    - if @standards.any?
+      - @standards.each do |standard|
+        %p{style: "margin-left:#{(standard.depth - 1) * 20}px;"}
+          = check_box "pdf_standards", "#{standard.id}", class: 'pdf_standards'
+          = standard.code_with_name
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Отмена
+    = link_to pdf_standards_path(format: :pdf), target: '_blank', id: 'pdf_standards_link' do
+      %button.btn.btn-primary Cгенерировать

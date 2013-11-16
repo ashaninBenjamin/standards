@@ -19,6 +19,7 @@ gem 'virtus'
 gem 'kaminari'
 gem 'usefull_scopes', github: 'kaize/usefull_scopes'
 gem 'pdfkit'
+gem 'bootstrap-modal-rails'
 
 # Use sqlite3 as the database for Active Record
 

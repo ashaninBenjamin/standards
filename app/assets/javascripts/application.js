@@ -16,6 +16,9 @@
 //= require js-routes
 //= require ckeditor/ckeditor
 //= require ckeditor/config
+//= require bootstrap-modal
+//= require bootstrap-modalmanager
+//= require standards_pdf
 
 $(document).on("change", "#standard_parent_id", function () {
     var select = $("#standard_number"),
