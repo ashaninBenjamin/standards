@@ -15,11 +15,11 @@
 
 #pdf_box.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-header
-    %h3#myModalLabel Генерация pdf
+    %h3#myModalLabel= t('.modal.header')
   .modal-body
     - if @standards.any?
       = check_box "pdf_standards", "all"
-      Все
+      = t('.modal.check_all')
       %br
       %br
       - @standards.each do |standard|
@@ -27,6 +27,6 @@
           = check_box "pdf_standards", "#{standard.id}", class: 'pdf_standards'
           = standard.code_with_name
   .modal-footer
-    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Отмена
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"}= t('.modal.cancel_btn')
     = link_to pdf_standards_path(format: :pdf), target: '_blank', id: 'pdf_standards_link' do
-      %button.btn.btn-primary Cгенерировать
+      %button.btn.btn-primary= t('.modal.ok_btn')

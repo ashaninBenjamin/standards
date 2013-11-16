@@ -70,6 +70,11 @@ ru:
         no_one_standard: Стандартов ещё нет.
         new_standard: Добавить стандарт
         download_pdf: Скачать в формате pdf
+        modal:
+          header: Генерация pdf стандартов
+          check_all: Все
+          ok_btn: Сгенерировать
+          cancel_btn: Отмена
       new:
         header: Добавить новый стандарт
       edit:
