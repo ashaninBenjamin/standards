@@ -10,7 +10,8 @@ $ ->
 
   $("#pdf_standards_all").change ->
     checked = $(@).prop('checked')
-    $("input[type=checkbox].pdf_standards").each ->
+    checkboxes = $("input[type=checkbox].pdf_standards")
+    checkboxes.each ->
       $(@).prop('checked', checked)
-      $(@).trigger('change')
+    checkboxes.trigger('change')
 
