@@ -15,4 +15,5 @@
  *= require radmin-responsive
  *= require radmin-custom
  *= require main
+ *= require bootstrap-modal
 */

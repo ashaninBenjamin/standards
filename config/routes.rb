@@ -33,4 +33,8 @@ Standards::Application.routes.draw do
       get :numbers, on: :member
     end
   end
+
+  namespace :pdf do
+    resources :standards, only: [:index, :show]
+  end
 end
