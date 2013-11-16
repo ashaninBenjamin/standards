@@ -2,6 +2,8 @@
   = @standard.code_with_name
   = link_to edit_standard_path(id: @standard.link), title: t('.edit_standard') do
     %i.icon-edit
+  = link_to pdf_standard_path(id: @standard.link, format: :pdf), title: t('.download_pdf'), target: '_blank' do
+    %i.icon-download-alt
 %p= object_state_label @standard
 .squiggly-border
 - if @parent
