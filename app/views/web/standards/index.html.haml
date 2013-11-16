@@ -18,6 +18,10 @@
     %h3#myModalLabel Генерация pdf
   .modal-body
     - if @standards.any?
+      = check_box "pdf_standards", "all"
+      Все
+      %br
+      %br
       - @standards.each do |standard|
         %p{style: "margin-left:#{(standard.depth - 1) * 20}px;"}
           = check_box "pdf_standards", "#{standard.id}", class: 'pdf_standards'
