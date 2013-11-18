@@ -1,7 +1,7 @@
 autosaving = ->
   $.ajax
     url: Routes.api_standards_path()
-    async: false
+    async: true
     dataType: "json"
     context: @
     type: "POST"
