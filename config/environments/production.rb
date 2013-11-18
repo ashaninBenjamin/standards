@@ -81,7 +81,7 @@ Standards::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
-  config.assets.precompile += %w(application_admin.css application_admin.js ckeditor/*)
+  config.assets.precompile += %w(application_admin.css application_admin.js ckeditor/* new_standard_saving.js.coffee edit_standard_saving.js.coffee)
   config.assets.precompile += Ckeditor.assets
 
   config.action_mailer.delivery_method = :smtp
