@@ -29,7 +29,7 @@ Standards::Application.routes.draw do
   end
 
   namespace :api do
-    resources :standards, only: [] do
+    resources :standards, only: [:create, :update] do
       get :numbers, on: :member
     end
   end
