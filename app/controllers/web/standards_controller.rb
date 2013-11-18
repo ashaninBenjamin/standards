@@ -4,7 +4,7 @@ class Web::StandardsController < Web::ProtectedApplicationController
   end
 
   def new
-    @standard = StandardNewType.new
+    @standard = StandardNewType.new(session[:standard])
     @available_numbers = @standard.available_numbers(current_client)
     @available_parents = Standard.sort_standards_by_code @standard.available_parents(current_client).decorate
   end
@@ -16,6 +16,7 @@ class Web::StandardsController < Web::ProtectedApplicationController
     @available_parents = Standard.sort_standards_by_code @standard.available_parents(current_client).decorate
     if @standard.save
       redirect_to standard_path(@standard.link)
+      session[:stadard] = nil
       f :success
     else
       render action: :new

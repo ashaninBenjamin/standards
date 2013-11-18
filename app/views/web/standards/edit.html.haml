@@ -1,4 +1,7 @@
 %h2= t(".header")
 #native_number= @standard.number
+-#TODO: без слоя-посредника
+#native_id= @standard.id
 .squiggly-border
 = render "form", url: { action: :update, id: @standard.link }
+= javascript_include_tag "edit_standard_saving"
